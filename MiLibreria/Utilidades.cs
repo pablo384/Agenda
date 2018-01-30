@@ -45,7 +45,7 @@ namespace MiLibreria
                     Console.WriteLine("{0}\t{1}", reader.GetInt32(0),
                         reader.GetDateTime(1), reader.GetString(2));
                     Evento asd = new Evento(reader.GetInt32(0),
-                        reader.GetDateTime(1), reader.GetString(2));
+                        reader.GetDateTime(1), reader.GetString(2), reader.GetInt32(3));
                     misEventos.Add(asd);
                 }
             }

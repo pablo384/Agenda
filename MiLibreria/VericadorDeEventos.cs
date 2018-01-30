@@ -11,16 +11,21 @@ namespace MiLibreria
 {
     public class VericadorDeEventos
     {
-        Timer buscador;
+        private Timer buscador;
         //FunctionAccionSonido Accion;
         private List<Evento> Datos;
-        public VericadorDeEventos(List<Evento> datos)
+        public VericadorDeEventos()
+        {
+            
+        }
+
+        public void startTimer(List<Evento> datos)
         {
             this.Datos = datos;
-            buscador = new System.Timers.Timer();
-            buscador.Interval = 1000;
-            buscador.Elapsed += new System.Timers.ElapsedEventHandler(this.Buscar);
-            buscador.Start();
+            this.buscador = new System.Timers.Timer();
+            this.buscador.Interval = 1000;
+            this.buscador.Elapsed += new System.Timers.ElapsedEventHandler(this.Buscar);
+            this.buscador.Start();
         }
 
         /*public void setAccion(FunctionAccionSonido Accion)
@@ -35,9 +40,7 @@ namespace MiLibreria
 
         public void Buscar(object sender, EventArgs e)
         {
-            //aGENDA_DE_EVENTOBindingSource.List
-            if ((Datos == null) || (Datos.LongCount() > 0))
-                return;
+            Console.WriteLine("paso un clic");
             foreach (Evento h in Datos)
             {
                 DateTime NowDate = DateTime.Now;
@@ -45,6 +48,11 @@ namespace MiLibreria
                 if (TrimMilliseconds(enteredDate) == TrimMilliseconds(NowDate))
                 {
                     Console.WriteLine("Ring Ring desde aca");
+                    //Accion(h);
+                }
+                if (enteredDate == NowDate)
+                {
+                    Console.WriteLine("Ring Ring desde aca 2");
                     //Accion(h);
                 }
             }

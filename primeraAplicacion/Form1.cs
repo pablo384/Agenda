@@ -47,7 +47,8 @@ namespace primeraAplicacion
             try{
                 TimeSpan ts = new TimeSpan(Convert.ToInt16(this.dateHourPicker.Text.Split(':')[0]), Convert.ToInt16(this.dateHourPicker.Text.Split(':')[1]), Convert.ToInt16(this.dateHourPicker.Text.Split(':')[2]));
                 Console.WriteLine(this.datePicker.Value.Date + ts);
-                string query = "insert into evento (dateEvent, name) values ('" + this.datePicker.Value.ToString(format) + "','" + this.textTitle.Text + "')";
+                string query = "insert into evento (dateEvent, name) values ('" + (this.datePicker.Value.Date + ts).ToString(format) + "','" + this.textTitle.Text + "')";
+                Console.WriteLine("se guardara esto " + (this.datePicker.Value.Date + ts).ToString(format));
                 try
                 {
                     Utilidades.EjecutarInsert(query);
@@ -69,6 +70,8 @@ namespace primeraAplicacion
         private void btnEventView_Click(object sender, EventArgs e)
         {
             List<Evento> misEventos = Utilidades.EjecutarSelectAll("select * from evento");
+            VericadorDeEventos b = new VericadorDeEventos();
+            b.startTimer(misEventos);
             Eventos_guardados even = new Eventos_guardados();
             even.Show();
             /*foreach (Evento item in misEventos)

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "primeraAplicacion", "primer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibreria", "MiLibreria\MiLibreria.csproj", "{281B68F1-7871-40E7-8299-0DDAB783CC21}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{3B5A2582-6C20-42C5-B85F-D3F170BFFB66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5A2582-6C20-42C5-B85F-D3F170BFFB66}.Debug|Any CPU.ActiveCfg = Debug
+		{3B5A2582-6C20-42C5-B85F-D3F170BFFB66}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

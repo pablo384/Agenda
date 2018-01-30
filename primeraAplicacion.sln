@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "primeraAplicacion", "primeraAplicacion\primeraAplicacion.csproj", "{BEA4C058-173E-4F6B-8B36-BE0DDBFDA17C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiLibreria", "MiLibreria\MiLibreria.csproj", "{281B68F1-7871-40E7-8299-0DDAB783CC21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEA4C058-173E-4F6B-8B36-BE0DDBFDA17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA4C058-173E-4F6B-8B36-BE0DDBFDA17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA4C058-173E-4F6B-8B36-BE0DDBFDA17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA4C058-173E-4F6B-8B36-BE0DDBFDA17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281B68F1-7871-40E7-8299-0DDAB783CC21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {579D12AA-71E7-49C5-855D-5F78322B766F}
+	EndGlobalSection
+EndGlobal

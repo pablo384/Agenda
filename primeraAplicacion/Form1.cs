@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,14 @@ namespace primeraAplicacion
 {
     public partial class Form1 : Form
     {
+        private VericadorDeEventos verificador;
         public Form1()
         {
             InitializeComponent();
+            List<Evento> misEventos = Utilidades.EjecutarSelectAll("select * from evento");
+            verificador = new VericadorDeEventos();
+            verificador.startTimer(misEventos);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,12 +53,21 @@ namespace primeraAplicacion
             try{
                 TimeSpan ts = new TimeSpan(Convert.ToInt16(this.dateHourPicker.Text.Split(':')[0]), Convert.ToInt16(this.dateHourPicker.Text.Split(':')[1]), Convert.ToInt16(this.dateHourPicker.Text.Split(':')[2]));
                 Console.WriteLine(this.datePicker.Value.Date + ts);
-                string query = "insert into evento (dateEvent, name) values ('" + (this.datePicker.Value.Date + ts).ToString(format) + "','" + this.textTitle.Text + "')";
+                string query = "insert into evento (dateEvent, name, song) values ('" + (this.datePicker.Value.Date + ts).ToString(format) + "','" + this.textTitle.Text + "', "+Convert.ToInt16(this.songSelected.Text) +")";
                 Console.WriteLine("se guardara esto " + (this.datePicker.Value.Date + ts).ToString(format));
                 try
                 {
                     Utilidades.EjecutarInsert(query);
                     MessageBox.Show("Evento guardado");
+                    try
+                    {
+                        List<Evento> misEventos = Utilidades.EjecutarSelectAll("select * from evento");
+                         this.verificador.setDatos = misEventos;
+                    } catch (Exception)
+                    {
+                        MessageBox.Show("Error poniendo a la escucha");
+                    }
+                    
                 }
                 catch (Exception)
                 {
@@ -69,10 +84,8 @@ namespace primeraAplicacion
 
         private void btnEventView_Click(object sender, EventArgs e)
         {
-            List<Evento> misEventos = Utilidades.EjecutarSelectAll("select * from evento");
-            VericadorDeEventos b = new VericadorDeEventos();
-            b.startTimer(misEventos);
-            Eventos_guardados even = new Eventos_guardados();
+            
+            EventosGuardados even = new EventosGuardados();
             even.Show();
             /*foreach (Evento item in misEventos)
             {
@@ -83,6 +96,21 @@ namespace primeraAplicacion
         private void datePicker_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.songSelected.Text);
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            MessageBox.Show("Creado y desarrollado por: \n Pablo Reinoso (pablo384) 2016-1357 \n Cristian Mejia 2016-");
         }
     }
 }

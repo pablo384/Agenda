@@ -18,9 +18,11 @@ namespace MiLibreria
     {
         int weeks;
         string[] today;
+        Utilidades utilidades;
         private SoundPlayer Player = new SoundPlayer();
         private System.Timers.Timer buscador;
         //FunctionAccionSonido Accion;
+        
         private List<Evento> Datos;
         public VericadorDeEventos()
         {
@@ -93,7 +95,7 @@ namespace MiLibreria
             {
                 DateTime NowDate = DateTime.Now;
                 DateTime enteredDate = h.dateTimeField;
-
+                
                 // Console.WriteLine("dias");
                 //Console.WriteLine(h.repeatField.ToString());
                 //Thread.Sleep(100);
@@ -103,6 +105,10 @@ namespace MiLibreria
                 {
                     Console.WriteLine("Ring Ring desde aca");
                     this.Soonar(h.songField);
+                    string query = ("DELETE FROM EVENTOS WHERE DATE <=" + "'" + Convert.ToString(NowDate) + "'");
+                    Utilidades.EjecutarInsert(query);
+                    MessageBox.Show("");
+                    
                     //Accion(h);
                 }
                 
@@ -110,6 +116,7 @@ namespace MiLibreria
                 {
                     Console.WriteLine("Ring Ring desde aca");
                     this.Soonar(h.songField);
+                    MessageBox.Show("");
                     //Accion(h);
                 }
             }
@@ -151,7 +158,6 @@ namespace MiLibreria
                 try
                 {
                     this.Player.Play();
-                    MessageBox.Show("");
                 }
                 catch (Exception ex)
                 {

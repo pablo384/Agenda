@@ -12,18 +12,13 @@ namespace primeraAplicacion
         private DateTime dateTime;
         private string name;
         private int song;
-        private string description;
-        private int repeat;
 
-        public Evento(int id, DateTime dateTime, string name, int song , string description, int repeat)
+        public Evento(int id, DateTime dateTime, string name, int song)
         {
             this.id = id;
             this.dateTime = dateTime;
             this.name = name;
             this.song = song;
-            this.description = description;
-            this.repeat = repeat;
-
         }
 
         public int idField
@@ -42,13 +37,6 @@ namespace primeraAplicacion
         {
             get => this.song;
         }
-        public string descriptionField
-        {
-            get => this.description;
-        }
-        public int repeatField
-        {
-            get => this.repeat;
-        }
+
     }
 }

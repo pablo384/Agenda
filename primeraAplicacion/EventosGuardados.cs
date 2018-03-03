@@ -19,11 +19,12 @@ namespace primeraAplicacion
 
         private void EventosGuardados_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'agendaDataSetFinal.evento' Puede moverla o quitarla según sea necesario.
-            this.eventoTableAdapter.Fill(this.agendaDataSetFinal.evento);
+            // TODO: esta línea de código carga datos en la tabla 'dBagendaDataSet1.EVENTOS' Puede moverla o quitarla según sea necesario.
+            this.eVENTOSTableAdapter1.Fill(this.dBagendaDataSet1.EVENTOS);
+
 
         }
-
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

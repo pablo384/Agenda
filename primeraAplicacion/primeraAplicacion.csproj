@@ -54,6 +54,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agendaDataSetFinal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBagendaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBagendaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EventosGuardados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +104,28 @@
     <None Include="agendaDataSetFinal.xss">
       <DependentUpon>agendaDataSetFinal.xsd</DependentUpon>
     </None>
+    <None Include="DBagendaDataSet.xsc">
+      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBagendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBagendaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBagendaDataSet.xss">
+      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBagendaDataSet1.xsc">
+      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBagendaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBagendaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBagendaDataSet1.xss">
+      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +138,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBagenda.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

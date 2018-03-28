@@ -18,7 +18,6 @@ namespace MiLibreria
     {
         int weeks;
         string[] today;
-        Utilidades utilidades;
         private SoundPlayer Player = new SoundPlayer();
         private System.Timers.Timer buscador;
         //FunctionAccionSonido Accion;
@@ -55,7 +54,6 @@ namespace MiLibreria
         }
         public void week()
         {
-            //today = new int[7];
             switch (DateTime.Today.DayOfWeek)
             {
                 case DayOfWeek.Monday : weeks = 1; break;
@@ -78,12 +76,8 @@ namespace MiLibreria
                 {
                     x += 1;
                     today[x] = Convert.ToString( element);
-                    //Console.WriteLine("hola"+today[x]);
-                    //Thread.Sleep(1000);
-                    //if (x == 7) { break; }
                 }
-                //Console.WriteLine("este es el dia" + today[weeks] + " [] " + today[1] + "[]" + weeks);
-                //Thread.Sleep(100);
+
             }
 
         }
@@ -95,20 +89,33 @@ namespace MiLibreria
             {
                 DateTime NowDate = DateTime.Now;
                 DateTime enteredDate = h.dateTimeField;
-                
-                // Console.WriteLine("dias");
-                //Console.WriteLine(h.repeatField.ToString());
-                //Thread.Sleep(100);
-
+                string query = "DELETE FROM EVENTOS WHERE ID = " + h.idField + "";
 
                 if (TrimMilliseconds(enteredDate) == TrimMilliseconds(NowDate))
                 {
                     Console.WriteLine("Ring Ring desde aca");
                     this.Soonar(h.songField);
-                    string query = ("DELETE FROM EVENTOS WHERE DATE <=" + "'" + Convert.ToString(NowDate) + "'");
-                    Utilidades.EjecutarInsert(query);
-                    MessageBox.Show("");
                     
+                    // MessageBox.Show("");//aqui tienes que reemplazar esto por el cuadro de aplazar evento.
+                    //using (primeraAplicacion.alerta sd = new primeraAplicacion.alerta())
+                    //  sd.Show();
+                    DialogResult res = MessageBox.Show("Posponer?", "Warning",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning
+                        );
+                    if (res == DialogResult.Yes)
+                    {
+                        Console.WriteLine("Posponiendo");
+                        enteredDate.AddMinutes(5);
+                        string format = "yyyy-MM-dd HH:mm:ss";
+                        Console.WriteLine("esto es la fecha: " + enteredDate.AddMinutes(5).ToString(format));
+                        Utilidades.EjecutarInsert("UPDATE EVENTOS SET dateEvent = '" + enteredDate.AddMinutes(5).ToString(format)+"' WHERE Id="+ h.idField);
+                      
+                    }
+                    else
+                    {
+                        Utilidades.EjecutarInsert(query);
+                        Console.WriteLine("no pasa nada");
+                    }
                     //Accion(h);
                 }
                 
@@ -116,7 +123,8 @@ namespace MiLibreria
                 {
                     Console.WriteLine("Ring Ring desde aca");
                     this.Soonar(h.songField);
-                    MessageBox.Show("");
+                    MessageBox.Show("Sonando");
+                    
                     //Accion(h);
                 }
             }

@@ -20,9 +20,9 @@ namespace primeraAplicacion {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DBagendaDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("estaultimadataset")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DBagendaDataSet : global::System.Data.DataSet {
+    public partial class estaultimadataset : global::System.Data.DataSet {
         
         private EVENTOSDataTable tableEVENTOS;
         
@@ -30,7 +30,7 @@ namespace primeraAplicacion {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DBagendaDataSet() {
+        public estaultimadataset() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace primeraAplicacion {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DBagendaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected estaultimadataset(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace primeraAplicacion {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DBagendaDataSet cln = ((DBagendaDataSet)(base.Clone()));
+            estaultimadataset cln = ((estaultimadataset)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace primeraAplicacion {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DBagendaDataSet";
+            this.DataSetName = "estaultimadataset";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DBagendaDataSet.xsd";
+            this.Namespace = "http://tempuri.org/estaultimadataset.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEVENTOS = new EVENTOSDataTable();
@@ -225,7 +225,7 @@ namespace primeraAplicacion {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DBagendaDataSet ds = new DBagendaDataSet();
+            estaultimadataset ds = new estaultimadataset();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -546,7 +546,7 @@ namespace primeraAplicacion {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBagendaDataSet ds = new DBagendaDataSet();
+                estaultimadataset ds = new estaultimadataset();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -806,7 +806,7 @@ namespace primeraAplicacion {
         }
     }
 }
-namespace primeraAplicacion.DBagendaDataSetTableAdapters {
+namespace primeraAplicacion.estaultimadatasetTableAdapters {
     
     
     /// <summary>
@@ -1004,7 +1004,7 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBagendaDataSet.EVENTOSDataTable dataTable) {
+        public virtual int Fill(estaultimadataset.EVENTOSDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1017,9 +1017,9 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBagendaDataSet.EVENTOSDataTable GetData() {
+        public virtual estaultimadataset.EVENTOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBagendaDataSet.EVENTOSDataTable dataTable = new DBagendaDataSet.EVENTOSDataTable();
+            estaultimadataset.EVENTOSDataTable dataTable = new estaultimadataset.EVENTOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1027,14 +1027,14 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBagendaDataSet.EVENTOSDataTable dataTable) {
+        public virtual int Update(estaultimadataset.EVENTOSDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBagendaDataSet dataSet) {
+        public virtual int Update(estaultimadataset dataSet) {
             return this.Adapter.Update(dataSet, "EVENTOS");
         }
         
@@ -1334,7 +1334,7 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DBagendaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(estaultimadataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._eVENTOSTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.EVENTOS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1353,7 +1353,7 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DBagendaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(estaultimadataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._eVENTOSTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.EVENTOS.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1371,7 +1371,7 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DBagendaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(estaultimadataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._eVENTOSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.EVENTOS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1413,7 +1413,7 @@ namespace primeraAplicacion.DBagendaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DBagendaDataSet dataSet) {
+        public virtual int UpdateAll(estaultimadataset dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

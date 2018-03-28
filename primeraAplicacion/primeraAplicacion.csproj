@@ -49,20 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agendaDataSetFinal.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>agendaDataSetFinal.xsd</DependentUpon>
+    <Compile Include="alerta.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBagendaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
+    <Compile Include="alerta.Designer.cs">
+      <DependentUpon>alerta.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBagendaDataSet1.Designer.cs">
+    <Compile Include="dbult.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
+      <DependentUpon>dbult.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="estaultimadataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>estaultimadataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="EventosGuardados.cs">
       <SubType>Form</SubType>
@@ -78,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="alerta.resx">
+      <DependentUpon>alerta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventosGuardados.resx">
       <DependentUpon>EventosGuardados.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,38 +97,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="agendaDataSetFinal.xsc">
-      <DependentUpon>agendaDataSetFinal.xsd</DependentUpon>
+    <None Include="dbult.xsc">
+      <DependentUpon>dbult.xsd</DependentUpon>
     </None>
-    <None Include="agendaDataSetFinal.xsd">
+    <None Include="dbult.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>agendaDataSetFinal.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbult.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="agendaDataSetFinal.xss">
-      <DependentUpon>agendaDataSetFinal.xsd</DependentUpon>
+    <None Include="dbult.xss">
+      <DependentUpon>dbult.xsd</DependentUpon>
     </None>
-    <None Include="DBagendaDataSet.xsc">
-      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
+    <None Include="estaultimadataset.xsc">
+      <DependentUpon>estaultimadataset.xsd</DependentUpon>
     </None>
-    <None Include="DBagendaDataSet.xsd">
+    <None Include="estaultimadataset.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBagendaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>estaultimadataset.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBagendaDataSet.xss">
-      <DependentUpon>DBagendaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DBagendaDataSet1.xsc">
-      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DBagendaDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBagendaDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DBagendaDataSet1.xss">
-      <DependentUpon>DBagendaDataSet1.xsd</DependentUpon>
+    <None Include="estaultimadataset.xss">
+      <DependentUpon>estaultimadataset.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,7 +20,7 @@ namespace primeraAplicacion
         private void EventosGuardados_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dBagendaDataSet1.EVENTOS' Puede moverla o quitarla según sea necesario.
-            this.eVENTOSTableAdapter1.Fill(this.dBagendaDataSet1.EVENTOS);
+            //this.eVENTOSTableAdapter1.Fill(this.dBagendaDataSet1.EVENTOS);
 
 
         }

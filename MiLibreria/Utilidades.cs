@@ -16,7 +16,7 @@ namespace MiLibreria
         public static DataSet Ejecutar(string query)
         {
 
-            OleDbConnection connection = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\Cristian Mejia\\Source\\Repos\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
+            OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\pablo\\Documents\\programas\\cs\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
             connection.Open();
             DataSet DS = new DataSet();
             OleDbDataAdapter DP = new OleDbDataAdapter(query, connection);
@@ -34,16 +34,16 @@ namespace MiLibreria
         }
         public static void EjecutarInsert(string query)
         {
-            OleDbConnection connection = new OleDbConnection ("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\Cristian Mejia\\Source\\Repos\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
+            OleDbConnection connection = new OleDbConnection ("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\pablo\\Documents\\programas\\cs\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
             connection.Open();
             OleDbCommand cmd = new OleDbCommand (query, connection);
             cmd.ExecuteNonQuery();
-            connection.Close();
+            connection.Close(); 
         }
         public static List<Evento> EjecutarSelectAll(string query)
         {
 
-            OleDbConnection connection = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\Cristian Mejia\\Source\\Repos\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
+            OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\pablo\\Documents\\programas\\cs\\Agenda3\\primeraAplicacion\\DBagenda.mdb");
             connection.Open();
             OleDbCommand cmd = new OleDbCommand(query, connection);
             OleDbDataReader reader = cmd.ExecuteReader();

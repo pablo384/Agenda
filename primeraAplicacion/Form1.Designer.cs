@@ -62,16 +62,18 @@
             this.songDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repeatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eVENTOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.estaultimadataset = new primeraAplicacion.estaultimadataset();
+            this.label4 = new System.Windows.Forms.Label();
             this.eVENTOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dBagendaDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBagendaDataSet1 = new primeraAplicacion.DBagendaDataSet();
-            this.label4 = new System.Windows.Forms.Label();
             this.eVENTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendaDataSetFinal = new primeraAplicacion.agendaDataSetFinal();
-            this.eventoTableAdapter = new primeraAplicacion.agendaDataSetFinalTableAdapters.eventoTableAdapter();
-            this.eVENTOSTableAdapter1 = new primeraAplicacion.DBagendaDataSetTableAdapters.EVENTOSTableAdapter();
             this.eVENTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENTOSTableAdapter = new primeraAplicacion.estaultimadatasetTableAdapters.EVENTOSTableAdapter();
+            this.dbult = new primeraAplicacion.dbult();
+            this.eVENTOSBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENTOSTableAdapter1 = new primeraAplicacion.dbultTableAdapters.EVENTOSTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -79,13 +81,15 @@
             this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estaultimadataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBagendaDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBagendaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendaDataSetFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -265,6 +269,7 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Evento Unico";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
@@ -282,6 +287,7 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Repetido";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // checkSUNDAY
             // 
@@ -366,6 +372,8 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Eventos Guardados";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // dataGridView1
             // 
@@ -379,7 +387,7 @@
             this.songDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.repeatDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.eVENTOSBindingSource2;
+            this.dataGridView1.DataSource = this.eVENTOSBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(33, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -428,20 +436,15 @@
             this.repeatDataGridViewTextBoxColumn.Name = "repeatDataGridViewTextBoxColumn";
             this.repeatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // eVENTOSBindingSource2
+            // eVENTOSBindingSource3
             // 
-            this.eVENTOSBindingSource2.DataMember = "EVENTOS";
-            this.eVENTOSBindingSource2.DataSource = this.dBagendaDataSet1BindingSource;
+            this.eVENTOSBindingSource3.DataMember = "EVENTOS";
+            this.eVENTOSBindingSource3.DataSource = this.estaultimadataset;
             // 
-            // dBagendaDataSet1BindingSource
+            // estaultimadataset
             // 
-            this.dBagendaDataSet1BindingSource.DataSource = this.dBagendaDataSet1;
-            this.dBagendaDataSet1BindingSource.Position = 0;
-            // 
-            // dBagendaDataSet1
-            // 
-            this.dBagendaDataSet1.DataSetName = "DBagendaDataSet";
-            this.dBagendaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.estaultimadataset.DataSetName = "estaultimadataset";
+            this.estaultimadataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -454,6 +457,11 @@
             this.label4.Text = "Eventos Guardados";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // eVENTOSBindingSource2
+            // 
+            this.eVENTOSBindingSource2.DataMember = "EVENTOS";
+            this.eVENTOSBindingSource2.DataSource = this.dBagendaDataSet1BindingSource;
+            // 
             // eVENTOSBindingSource
             // 
             this.eVENTOSBindingSource.DataMember = "EVENTOS";
@@ -462,25 +470,29 @@
             // eventoBindingSource
             // 
             this.eventoBindingSource.DataMember = "evento";
-            this.eventoBindingSource.DataSource = this.agendaDataSetFinal;
-            // 
-            // agendaDataSetFinal
-            // 
-            this.agendaDataSetFinal.DataSetName = "agendaDataSetFinal";
-            this.agendaDataSetFinal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eventoTableAdapter
-            // 
-            this.eventoTableAdapter.ClearBeforeFill = true;
-            // 
-            // eVENTOSTableAdapter1
-            // 
-            this.eVENTOSTableAdapter1.ClearBeforeFill = true;
             // 
             // eVENTOSBindingSource1
             // 
             this.eVENTOSBindingSource1.DataMember = "EVENTOS";
             this.eVENTOSBindingSource1.DataSource = this.dBagendaDataSet1BindingSource;
+            // 
+            // eVENTOSTableAdapter
+            // 
+            this.eVENTOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbult
+            // 
+            this.dbult.DataSetName = "dbult";
+            this.dbult.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eVENTOSBindingSource4
+            // 
+            this.eVENTOSBindingSource4.DataMember = "EVENTOS";
+            this.eVENTOSBindingSource4.DataSource = this.dbult;
+            // 
+            // eVENTOSTableAdapter1
+            // 
+            this.eVENTOSTableAdapter1.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -501,14 +513,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBagendaDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBagendaDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendaDataSetFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estaultimadataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,19 +551,21 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource eVENTOSBindingSource;
         private System.Windows.Forms.BindingSource dBagendaDataSet1BindingSource;
-        private DBagendaDataSet dBagendaDataSet1;
         private System.Windows.Forms.BindingSource eventoBindingSource;
-        private agendaDataSetFinal agendaDataSetFinal;
-        private agendaDataSetFinalTableAdapters.eventoTableAdapter eventoTableAdapter;
-        private DBagendaDataSetTableAdapters.EVENTOSTableAdapter eVENTOSTableAdapter1;
+        private System.Windows.Forms.BindingSource eVENTOSBindingSource2;
+        private System.Windows.Forms.BindingSource eVENTOSBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateEventDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn songDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn repeatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource eVENTOSBindingSource2;
-        private System.Windows.Forms.BindingSource eVENTOSBindingSource1;
+        private estaultimadataset estaultimadataset;
+        private System.Windows.Forms.BindingSource eVENTOSBindingSource3;
+        private estaultimadatasetTableAdapters.EVENTOSTableAdapter eVENTOSTableAdapter;
+        private dbult dbult;
+        private System.Windows.Forms.BindingSource eVENTOSBindingSource4;
+        private dbultTableAdapters.EVENTOSTableAdapter eVENTOSTableAdapter1;
     }
 }
 

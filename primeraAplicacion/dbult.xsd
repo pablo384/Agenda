@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DBagendaDataSet" targetNamespace="http://tempuri.org/DBagendaDataSet.xsd" xmlns:mstns="http://tempuri.org/DBagendaDataSet.xsd" xmlns="http://tempuri.org/DBagendaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dbult" targetNamespace="http://tempuri.org/dbult.xsd" xmlns:mstns="http://tempuri.org/dbult.xsd" xmlns="http://tempuri.org/dbult.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -82,7 +82,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DBagendaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DBagendaDataSet" msprop:Generator_UserDSName="DBagendaDataSet">
+  <xs:element name="dbult" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbult" msprop:Generator_UserDSName="dbult">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="EVENTOS" msprop:Generator_TableClassName="EVENTOSDataTable" msprop:Generator_TableVarName="tableEVENTOS" msprop:Generator_TablePropName="EVENTOS" msprop:Generator_RowDeletingName="EVENTOSRowDeleting" msprop:Generator_RowChangingName="EVENTOSRowChanging" msprop:Generator_RowEvHandlerName="EVENTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENTOSRowDeleted" msprop:Generator_UserTableName="EVENTOS" msprop:Generator_RowChangedName="EVENTOSRowChanged" msprop:Generator_RowEvArgName="EVENTOSRowChangeEvent" msprop:Generator_RowClassName="EVENTOSRow">
